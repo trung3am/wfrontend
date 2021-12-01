@@ -1,0 +1,19 @@
+
+.paperStyle-quickview{
+    font-family: 'Roboto Slab', serif;
+    padding: 20;
+    height: 620px ;
+    width: 800px; 
+    margin: 50px auto;
+}
+.infoproduce-style {
+margin: 5px;
+padding: 5px;
+}
+.btn-style{
+    margin-right: 30px;
+}
+.infoproduce-style-addcart{
+    display: flex;
+    justify-content:space-evenly;
+}

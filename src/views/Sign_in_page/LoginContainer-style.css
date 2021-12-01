@@ -1,0 +1,15 @@
+.paperStyle {
+ padding: 20;
+ height: 500px ;
+ width: 300px; 
+ margin: 50px auto;
+
+}
+.appbar-style {
+    position: static;
+    width: 300px;
+    padding: 20;
+    height: 50px ;
+    margin: 20px auto;
+   
+}
