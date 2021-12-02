@@ -1,10 +1,11 @@
-import React, { Component } from "react";
-import { Route, Switch, withRouter, Redirect } from "react-router-dom";
-import { connect } from "react-redux";
-import { closeMaxProductModal, toogleSideBar } from "./store/actions";
-import MainLayout from "./Layouts/MainLayout";
-import * as Maincontainers from "./views";
-import "./App.css";
+import React, { Component } from 'react';
+import { Route, Switch, withRouter, Redirect } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { closeMaxProductModal, toogleSideBar } from './store/actions';
+import MainLayout from './Layouts/MainLayout';
+import * as Maincontainers from './views';
+import './App.css';
+import EditUser from './views/EditUser/EditUser';
 
 class App extends Component {
   render() {
@@ -19,17 +20,19 @@ class App extends Component {
           toggleSideBar={this.props.toggleSideBarProp}
         >
           <Switch>
-            <Route path={"/"} exact component={Maincontainers.HomePage} />
-            <Route path={"/all"} exact component={Maincontainers.AllPage} />
+            <Route path={'/'} exact component={Maincontainers.HomePage} />
+            <Route path={'/all'} exact component={Maincontainers.AllPage} />
             <Route
-              path={"/category/:category"}
+              path={'/category/:category'}
               component={Maincontainers.ProductCategoriesPage}
             />
-            <Route path={"/sale"} component={Maincontainers.SalesPage} />
-            <Route path={"/cart"} component={Maincontainers.CartPage} />
-            <Route path={"/checkout"} component={Maincontainers.CheckoutPage} />
+            <Route path={'/sale'} component={Maincontainers.SalesPage} />
+            <Route path={'/cart'} component={Maincontainers.CartPage} />
+            <Route path={'/checkout'} component={Maincontainers.CheckoutPage} />
+            <Route path={'/SignIn'} component={Maincontainers.LogInPage} />
+            <Route path={'/EditUser'} component={EditUser} />
             <Route
-              path={"/product/:productSlug"}
+              path={'/product/:productSlug'}
               render={(props) => (
                 <Maincontainers.ProductDetailsPage
                   key={props.match.params.productSlug}
@@ -38,7 +41,7 @@ class App extends Component {
               )}
             />
             {/*always redirect to index*/}
-            <Redirect to={"/"} />
+            <Redirect to={'/'} />
           </Switch>
         </MainLayout>
       </div>

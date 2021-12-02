@@ -1,6 +1,8 @@
-.edit-user {
+.sign-up {
   display: flex;
   flex-direction: column;
   width: 380px;
-  margin: auto;
+}
+.sign-up .title {
+  margin: 10px 0;
 }
