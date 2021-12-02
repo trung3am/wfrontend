@@ -3,19 +3,19 @@ import React from "react";
 const SelloutCards = () => {
   let cardsData = [
     {
-      image: "money.png",
+      image: "https://trung-img-server.herokuapp.com/61a83bff43a0b417dd6abfa2",
       title: "Best Prices",
       description:
         "Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.",
     },
     {
-      image: "truck.png",
+      image: "https://trung-img-server.herokuapp.com/61a83c6243a0b417dd6abfa5",
       title: "Fast delivery",
       description:
         "Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.",
     },
     {
-      image: "check-circle.png",
+      image: "https://trung-img-server.herokuapp.com/61a83c7a43a0b417dd6abfa8",
       title: "Free Returns",
       description:
         "Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.",
@@ -28,7 +28,7 @@ const SelloutCards = () => {
         <div className="card sellout-card card-body shadow" key={index}>
           <img
             className="sellout-icon"
-            src={require(`../../../assets/icons/${card.image}`)}
+            src={card.image}
             alt="Fila Back"
           />
           <div className="mt-3 text-center">

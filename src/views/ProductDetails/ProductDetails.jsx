@@ -120,7 +120,7 @@ class ProductDetails extends Component {
               <div className="product-card bg-white">
                 <img
                   className="product-card-image"
-                  src={"http://localhost:3005/" + this.product.img}
+                  src={this.product.img}
                   alt={this.product.name}
                 />
                 <div className="product-card-details">

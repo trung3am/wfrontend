@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 const Deal = () => {
   const deal = {
-    image: "flare_dress.png",
+    image: "https://trung-img-server.herokuapp.com/61a83b3543a0b417dd6abf90",
     title: "Latest In Ladies Fashion",
     text:
       "Suspendisse massa leo, vesti cursus nulla sit amet, placeratlorem.vestibulum cursus nulla sit amet, placerat lorem",
@@ -14,7 +14,7 @@ const Deal = () => {
       <div className="deals-content shadow">
         <img
           className="deals-image"
-          src={require(`../../../assets/images/${deal.image}`)}
+          src={deal.image}
           alt="#"
         />
         <div className="deals-text">

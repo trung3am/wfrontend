@@ -4,14 +4,14 @@ import { NavLink } from "react-router-dom";
 const ItemBanners = () => {
   let itemData = [
     {
-      image: "baby_dress.jpg",
+      image: "https://trung-img-server.herokuapp.com/61a83ad243a0b417dd6abf8a",
       title: "Kids Fashion",
       text: `Limited Offer`,
       link: "/category/kids",
       percentage: "30",
     },
     {
-      image: "shirt.jpg",
+      image: "https://trung-img-server.herokuapp.com/61a83afa43a0b417dd6abf8d",
       title: "Men's Collectons",
       text: `New Arrivals`,
       link: "/category/men",
@@ -33,7 +33,7 @@ const ItemBanners = () => {
           </div>
           <img
             className="banner-image"
-            src={require(`../../../assets/images/${item.image}`)}
+            src={item.image}
             alt="banner"
           />
         </div>

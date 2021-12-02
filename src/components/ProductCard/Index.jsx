@@ -24,7 +24,7 @@ const Index = (props) => {
           <div className="shop-card-image">
             <NavLink to={`/product/${item.slug}`} exact>
               <img
-                src={"http://localhost:3005/" + item.img}
+                src={item.img}
                 alt={item.img.split(".")[0]}
               />
             </NavLink>

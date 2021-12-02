@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 const Banner = () => {
   const banner = {
-    image: "fila_black.jpg",
+    image: "https://trung-img-server.herokuapp.com/61a83a1643a0b417dd6abf87",
     title: "Awsome Collection",
     text:
       "   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa,ipsam, eligendi, in quo sunt possimus non incidunt odit veroaliquid similique quaerat.",
@@ -23,7 +23,7 @@ const Banner = () => {
         </div>
         <img
           className="main-banner-image"
-          src={require(`../../../assets/images/${banner.image}`)}
+          src={banner.image}
           alt="banner"
         />
       </div>

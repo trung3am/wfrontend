@@ -15,7 +15,7 @@ const cartProducts = (props) => {
             <div className="col-md-2 shop-cart-image-div">
               <img
                 className={"shop-cart-image"}
-                src={require(`../../assets/images/shop_images/${props.productPhoto}`)}
+                src={props.productPhoto}
                 alt={props.productPhoto.split(".")[0]}
               />
             </div>

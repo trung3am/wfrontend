@@ -13,7 +13,7 @@ const HomeSale = (props) => {
       <div className="card card-body shadow" key={index}>
         <img
           className="card-img-top"
-          src={"http://localhost:3005/" + product.img}
+          src={product.img}
           alt="product"
         />
         <h5 className="card-title">{product.name}</h5>

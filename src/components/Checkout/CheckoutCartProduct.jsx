@@ -13,7 +13,7 @@ const checkoutCartProduct = (props) => {
           <div>
             <img
               className={"shop-checkout-image"}
-              src={require(`../../assets/images/shop_images/${props.checkoutProductImage}`)}
+              src={props.checkoutProductImage}
               alt={props.checkoutProductImage.split(".")[0]}
             />
           </div>
