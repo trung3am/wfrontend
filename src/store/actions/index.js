@@ -1,5 +1,14 @@
 import * as actionTypes from "./actionTypes";
 
+export const startFetchData = () =>{
+  return {type: actionTypes.START_FETCHING_DATA}
+}
+
+export const loadDataToStore = (products) =>{
+  console.log(products)
+  return {type: actionTypes.LOAD_DATA_TO_STORE, products:products };
+}
+
 export const setProductPriceFilter = (price) => {
   return { type: actionTypes.SET_PRODUCT_PRICE_FILTER, price: price };
 };

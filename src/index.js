@@ -7,14 +7,13 @@ import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "./index.css";
 import { Elements, StripeProvider } from "react-stripe-elements";
 import App from "./App";
-
 const app = (
   <Provider store={store}>
     <BrowserRouter>
       {/* StripeProvider initializes the stripe and passes in the publishable key */}
       <StripeProvider apiKey={"ssffsf"}>
         <Elements>
-          <App />
+          <App/>
         </Elements>
       </StripeProvider>
     </BrowserRouter>

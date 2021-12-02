@@ -194,6 +194,15 @@ const appReducer = (state = initialState, action) => {
       };
     }
 
+
+    case actionTypes.LOAD_DATA_TO_STORE:
+      return{
+        ...state,
+        isLoading: false,
+        products: action.products,
+        
+      }
+
     case actionTypes.TOOLE_ITEM_IN_WISHLIST:
       let wisList = state.wishlist;
       let chkProductInWishList = state.wishlist.find(

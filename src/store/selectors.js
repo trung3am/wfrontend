@@ -3,6 +3,7 @@ import { VISIBILITY_FILTERS } from "../static/constants";
 export const getProducts = (store) => store.products;
 export const getProductPriceFilter = (store) => store.priceFilter;
 export const getWishlist = (store) => store.wishlist;
+export const getDataLoadingStatus = (store) => store.isLoading;
 
 export const getProductsByFilter = (store, visibilityFilter, count = null) => {
   const allProducts = getProducts(store);
