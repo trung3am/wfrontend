@@ -5,8 +5,16 @@ export const startFetchData = () =>{
 }
 
 export const loadDataToStore = (products) =>{
-  console.log(products)
   return {type: actionTypes.LOAD_DATA_TO_STORE, products:products };
+}
+
+export const signOut = () =>{
+  return {type: actionTypes.SIGN_OUT }
+}
+
+export const updateCurrentUser = (currentUser) => {
+  console.log(currentUser)
+  return {type: actionTypes.UPDATE_CURRENT_USER, currentUser: currentUser}
 }
 
 export const setProductPriceFilter = (price) => {

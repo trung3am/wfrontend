@@ -1,5 +1,6 @@
 let data = {
-  currentUser: "trung ",
+  currentUser: null,
+  user_data: null,
   cart: [],
   wishlist: [],
   vat: 16, //vat in percentage

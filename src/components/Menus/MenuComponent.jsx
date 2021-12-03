@@ -13,7 +13,7 @@ const MenuComponent = (props) => {
             <MenuItem linkTo={'/cart'}>
                 Cart <span className="badge badge-light">{props.cartCount}</span>
             </MenuItem>
-            <MenuItem linkTo={props.currentUser ? '/' :"/"}>{props.currentUser ? props.currentUser : "Login or Sign up"}</MenuItem>
+            <MenuItem linkTo={props.currentUser ? '/user' :"/login"}>{props.currentUser ? props.currentUser : "Login or Sign up"}</MenuItem>
         </React.Fragment>
     )
 };

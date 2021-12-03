@@ -28,14 +28,7 @@ const cartProducts = (props) => {
                   classStyleName={"product-wishlist"}
                 />
               </div>
-              {props.productVendor ? (
-                <h6 className="shop-cart-category">
-                  {`Sold by : `}
-                  <span className="text-caitalize">
-                    {props.productVendor.name}
-                  </span>
-                </h6>
-              ) : null}
+              
 
               <h5 className="shop-cart-name text-capitalize">
                 {props.productName}

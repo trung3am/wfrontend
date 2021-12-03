@@ -203,6 +203,20 @@ const appReducer = (state = initialState, action) => {
         
       }
 
+    case actionTypes.SIGN_OUT:
+      return{
+        ...state,
+        currentUser: null,
+        user_data: null,
+      }
+
+    case actionTypes.UPDATE_CURRENT_USER:
+      return{
+        ...state,
+        currentUser: action.currentUser.user_name,
+        user_data: action.currentUser
+      }
+
     case actionTypes.TOOLE_ITEM_IN_WISHLIST:
       let wisList = state.wishlist;
       let chkProductInWishList = state.wishlist.find(

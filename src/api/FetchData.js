@@ -36,6 +36,8 @@ async function FetchProductData ()  {
     if (temp2 === '0') {
       e['sale'] = false
     }
+    e['id'] = parseInt(e['id'])
+    e['quantity'] = parseInt(e['quantity'])
   });
   console.log('data', response.data);
   return response.data;
