@@ -8,20 +8,20 @@ const customerInputs = (props) => {
             <div className="row">
                 <div className="col-md-6 mb-3">
                     <InputField
-                    label={'First Name'}
+                    label={'Full Name'}
                     type={'text'}
-                    placeholder={'First Name'}
-                    identifier={props.customerInfo.firstName}
-                    changed={(event) => props.inputChanged(event, 'firstName')}/>
+                    placeholder={'Full Name'}
+                    identifier={props.customerInfo.fullName}
+                    changed={(event) => props.inputChanged(event, 'fullName')}/>
                 </div>
 
                 <div className="col-md-6 mb-3">
                     <InputField
-                    label={'Second Name'}
-                    type={'text'}
-                    placeholder={'Second Name'}
-                    identifier={props.customerInfo.secondName}
-                    changed={(event) => props.inputChanged(event, 'secondName')}/>
+                    label={'Phone number'}
+                    type={'number'}
+                    placeholder={'Phone number'}
+                    identifier={props.customerInfo.phoneNumber}
+                    changed={(event) => props.inputChanged(event, 'phoneNumber')}/>
                 </div>
             </div>
 
@@ -32,6 +32,15 @@ const customerInputs = (props) => {
                     placeholder={'you@example.com'}
                     identifier={props.customerInfo.email}
                     changed={(event) => props.inputChanged(event, 'email')}/>
+
+            </div>
+            <div className="mb-3">
+                <InputField
+                    label={'address'}
+                    type={'text'}
+                    placeholder={'adress'}
+                    identifier={props.customerInfo.address}
+                    changed={(event) => props.inputChanged(event, 'address')}/>
 
             </div>
         </React.Fragment>

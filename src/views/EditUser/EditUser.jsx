@@ -25,15 +25,11 @@ const EditUser =(props)=> {
   };
 
   const handleSubmit = async (event) =>{
-    const emailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
     event.preventDefault();
     
     if (newPassword !== confirmPassword) {
       alert("passwords don't match");
-      return;
-    }
-    if (!email.match(emailFormat)) {
-      alert("invalid email");
       return;
     }
     if (phoneNumber.length > 15 || phoneNumber.length < 3 ) {

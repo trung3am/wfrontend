@@ -14,6 +14,7 @@ import PropTypes from "prop-types";
 import formValidator from "../Utility/formValidation";
 import { CardElement, injectStripe } from "react-stripe-elements";
 import { currencyToUse } from "../Utility/currency";
+import CheckOutApi from "../api/CheckOutApi";
 
 class Checkout extends Component {
   state = {
@@ -27,13 +28,13 @@ class Checkout extends Component {
     makeOrder: false,
     correctCardInfo: false,
     customerInfo: {
-      firstName: {
+      fullName: {
         value: "",
         valid: false,
         touched: false,
         errorsMsg: "",
       },
-      secondName: {
+      phoneNumber: {
         value: "",
         valid: false,
         touched: false,
@@ -44,6 +45,12 @@ class Checkout extends Component {
         valid: false,
         touched: false,
         errorsMsg: "",
+      },
+      address: {
+        value: "",
+        valid: false,
+        touched: false,
+        errorsMsg:""
       },
     },
   };
@@ -87,9 +94,10 @@ class Checkout extends Component {
     let order = {};
     order["cart"] = this.props.cartProductsProps;
     order["user"] = {
-      firstName: this.state.customerInfo.firstName.value,
-      secondName: this.state.customerInfo.secondName.value,
+      fullName: this.state.customerInfo.fullName.value,
+      phoneNumber: this.state.customerInfo.phoneNumber.value,
       email: this.state.customerInfo.email.value,
+      address: this.state.customerInfo.address.value,
     };
     order["usedPromoCode"] = this.state.promoCode;
     order["currency"] = this.props.usedCurrencyProp;
@@ -99,6 +107,7 @@ class Checkout extends Component {
     // todo
     // create stripe token for payments
     this.props.confirmOrderProp(order);
+    CheckOutApi(order["cart"], order["user"], order["paymentMethod"] )
   };
 
   setPromoCode = (event) => {

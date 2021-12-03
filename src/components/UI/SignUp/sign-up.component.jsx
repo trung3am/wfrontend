@@ -23,8 +23,8 @@ class SignUp extends React.Component {
 
   handleSubmit = async (event) => {
     event.preventDefault();
-    const nameFormat = /^([a-z0-9]){5,30}$/;
-    const emailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    // const nameFormat = /^([a-z0-9]){5,30}$/;
+    // const emailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     const { displayName, email, password, confirmPassword } = this.state;
     if (!displayName || !email || !password) {
       alert("please provide information");
@@ -34,29 +34,27 @@ class SignUp extends React.Component {
       alert("passwords don't match");
       return;
     }
-    if (!email.match(emailFormat)) {
-      alert("invalid email");
-      return;
-    }
-    if (!displayName.match(nameFormat)) {
-      alert("invalid username");
-      return;
-    }
+    // if (!email.match(emailFormat)) {
+    //   alert("invalid email");
+    //   return;
+    // }
+    // if (!displayName.match(nameFormat)) {
+    //   alert("invalid username");
+    //   return;
+    // }
     if (password.length < 6 || password.length > 30) {
       alert("password must contain at least 6 character long");
       return;
     }
     try {
       const user = await SignUpApi(displayName, email, password)
-      if (user.message!==null) {
-        alert("Username or email already taken");
-        return;
-      }
+
       if (user.error) {
         alert("cannot create user");
         return;
       }
       this.props.updateCurrentUser(user);
+      return
     } catch (e) {
       console.log(e)
     }
