@@ -1,4 +1,5 @@
 let data = {
+  currentUser: "trung ",
   cart: [],
   wishlist: [],
   vat: 16, //vat in percentage
@@ -34,23 +35,22 @@ let data = {
   modalMessage: null,
   showSideNavigation: false,
   // used currency should load with the default currency name and rate
-  usedCurrency: { VND: 230, symbol: "VND " },
+  usedCurrency: { VND: 1, symbol: "VND " },
   // exchange rates can be got from any api source
   exchangeRates: {
-    base: "KES",
-    date: "2019-01-29",
+    base: "VND",
+    date: "12-3-2021",
     rates: {
-      VND: 230,
-      KES: 1,
-      USD: 0.0099,
-      GBP: 0.0075,
-      EUR: 0.0087,
+      VND: 1,
+      USD: 0.000044,
+      GBP: 0.000033,
+      EUR: 0.000039,
 
     },
   },
   // overkill but doing it for fun
   currencySymbols: {
-    KES: "Ksh ",
+
     USD: "$",
     GBP: "£",
     EUR: "€",
@@ -58,10 +58,10 @@ let data = {
   },
   priceFilter: {
     min: 0,
-    max: 3700,
-    pricerange: 3700,
+    max: 500000,
+    pricerange: 500000,
   },
-  
+  products: null
 };  
 
 

@@ -20,6 +20,7 @@ class App extends Component {
           modalMessage={this.props.modalMessageProp}
           showSideBar={this.props.showSideNavigationProp}
           toggleSideBar={this.props.toggleSideBarProp}
+          currentUser={this.props.currentUser}
         >
           <Switch>
             <Route path={"/"} exact component={this.props.isLoading ? Spinner : Maincontainers.HomePage} />
@@ -56,6 +57,7 @@ const mapStateToProps = (state) => {
     showModalProp: state.productMaxShowModal,
     modalMessageProp: state.modalMessage,
     showSideNavigationProp: state.showSideNavigation,
+    currentUser: state.currentUser
   };
 };
 

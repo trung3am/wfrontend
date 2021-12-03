@@ -19,6 +19,7 @@ const MainLayout = (props) => {
           <SideMenu
             cartItemNumber={props.storeCartCount}
             showBackDrop={props.showSideBar}
+            currentUser={props.currentUser}
           />
         </SideMenuWrapper>
         <ContentWrapper>
@@ -26,6 +27,7 @@ const MainLayout = (props) => {
             <MainMenu
               cartItemNumber={props.storeCartCount}
               toggleSideBar={props.toggleSideBar}
+              currentUser={props.currentUser}
             />
           </header>
           <main>

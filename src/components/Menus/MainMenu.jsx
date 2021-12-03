@@ -19,7 +19,7 @@ const MainMenu = (props) => {
 
                 <div className="collapse navbar-collapse">
                     <Menu menuClasses="navbar-nav ml-auto mt-2 mt-lg-0">
-                        <MenuComponent cartCount={props.cartItemNumber} />
+                        <MenuComponent cartCount={props.cartItemNumber} currentUser={props.currentUser} />
                     </Menu>
                 </div>
             </div>

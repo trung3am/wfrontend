@@ -8,7 +8,7 @@ const SideMenu = (props) => {
     return (
         <React.Fragment>
             <Menu menuClasses="nav flex-column">
-                <MenuComponent cartCount={props.cartItemNumber}/>
+                <MenuComponent cartCount={props.cartItemNumber} currentUser={props.currentUser}/>
             </Menu>
             {/*<Backdrop showBackDrop={props.showBackDrop}/>*/}
         </React.Fragment>
