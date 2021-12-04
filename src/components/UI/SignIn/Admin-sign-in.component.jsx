@@ -3,12 +3,13 @@ import React from 'react';
 import FormInput from '../../FormInput/form-input.component';
 import CustomButton from '../../CustomButton/custom-button.component';
 
-import { updateCurrentUser, updateOrder } from '../../../store/actions';
+import { updateCurrentUser, updateOrder, updateUserAdmin } from '../../../store/actions';
 
 import './sign-in.styles.css';
 import { connect } from 'react-redux';
 import LoginApi from '../../../api/LoginApi';
 import GetOrderAdminApi from '../../../api/GetOrderAsAdmin';
+import AdminGetUser from '../../../api/AdminGetUser';
 
 
 class SignInAsAdmin extends React.Component {
@@ -44,7 +45,9 @@ class SignInAsAdmin extends React.Component {
       }
       await this.props.updateCurrentUser(user)
       const order = await GetOrderAdminApi(user.jwt)
-      this.props.updateOrder(order)
+      await this.props.updateOrder(order)
+      const users = await AdminGetUser(user.jwt)
+      this.props.updateUserAdmin(users)
       return;
     } catch (e) {
       console.log(e)
@@ -95,6 +98,7 @@ class SignInAsAdmin extends React.Component {
 
 const mapDispatchToProps = (dispatch) => {
   return {
+    updateUserAdmin: (users) => dispatch(updateUserAdmin(users)),
     updateOrder : (order) =>dispatch(updateOrder(order)),
     updateCurrentUser : (currentUser) => dispatch(updateCurrentUser(currentUser))
   }

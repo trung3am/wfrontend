@@ -12,6 +12,10 @@ export const updateOrder = (order) =>{
   return {type: actionTypes.UPDATE_ORDER, order: order}
 }
 
+export const updateUserAdmin = (users) => {
+  return {type: actionTypes.UPDATE_USER_ADMIN, users: users}
+}
+
 export const signOut = () =>{
   return {type: actionTypes.SIGN_OUT }
 }

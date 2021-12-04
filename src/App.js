@@ -10,6 +10,8 @@ import Spinner from "./Spinner/Spinner";
 import "./App.css";
 
 import AdminMain from "./views/AdminMain";
+import AdminUser from "./views/Admin/AdminUser";
+import AdminOrder from "./views/Admin/AdminOrder";
 
 
 
@@ -34,8 +36,8 @@ class App extends Component {
             <Route path={"/admin/product"} exact component={this.props.currentUser && this.props.user_data.admin==="1" ? 
              Maincontainers.ProductAdminPage : Spinner} />
             <Route path={"/admin/main"} component={this.props.currentUser && this.props.user_data.admin==="1" ? AdminMain :Spinner}/>
-            <Route path={"/admin/user"} component={this.props.currentUser && this.props.user_data.admin==="1" ? AdminMain :Spinner}/>
-            <Route path={"/admin/order"} component={this.props.currentUser && this.props.user_data.admin==="1" ? AdminMain :Spinner}/>
+            <Route path={"/admin/user"} component={this.props.currentUser && this.props.user_data.admin==="1" ? AdminUser :Spinner}/>
+            <Route path={"/admin/order"} component={this.props.currentUser && this.props.user_data.admin==="1" ? AdminOrder :Spinner}/>
             <Route
               path={"/category/:category"}
               component={this.props.isLoading ? Spinner : Maincontainers.ProductCategoriesPage}

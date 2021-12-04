@@ -22,6 +22,12 @@ const appReducer = (state = initialState, action) => {
         order: action.order
       }
     
+    case actionTypes.UPDATE_USER_ADMIN:
+      return{
+        ...state,
+        users: action.users
+      }
+
     case actionTypes.ADD_TO_CART:
       let newCart = [...state.cart];
       let newCartTotal = state.cartTotal;
