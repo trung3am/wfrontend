@@ -10,9 +10,11 @@ const LeftColumn = () => {
         <PromoCodes showText>
           {/*shown only if there are no promocodes set*/}
           <div>
-            <h5>New Stock!</h5>
+            <h5>Hàng mới về!</h5> 
+            {/* New Stock! */}
             <p>
-              We have just restocked. Shop now fot the latest trends in fashion.
+              Hàng mới về. Nhanh tay mua sắm để bắt kịp xu hướng thời trang hiện đại.
+              {/* We have just restocked. Shop now fot the latest trends in fashion. */}
             </p>
           </div>
         </PromoCodes>

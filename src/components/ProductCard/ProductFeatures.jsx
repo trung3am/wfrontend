@@ -18,14 +18,14 @@ const ProductFeatures = (props) => {
         >
           <International />
           {props.showText ? (
-            <span className="feature-text">Shipped From Abroad</span>
+            <span className="feature-text">Hàng Xuất Khẩu</span> // Shipped From Abroad
           ) : null}
         </span>
       ) : (
         <span className="shop-card-product-features" title="Local Shipping">
           <LocalShipping />
           {props.showText ? (
-            <span className="feature-text">Local Shippping</span>
+            <span className="feature-text">Hàng Nội Địa</span> // Local Shippping
           ) : null}
         </span>
       )}

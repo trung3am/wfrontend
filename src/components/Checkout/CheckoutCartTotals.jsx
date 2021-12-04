@@ -10,7 +10,8 @@ const checkoutCartTotals = (props) => {
     <React.Fragment>
       <li className="list-group-item ">
         <div className={"d-flex justify-content-between shop-checkout-prices"}>
-          Sub Total
+          Tổng Thanh Toán
+          {/* Sub Total */}
           <span>
             {" "}
             <span style={{ textTransform: "lowercase" }}>{currencyName}</span>
@@ -27,7 +28,8 @@ const checkoutCartTotals = (props) => {
           </span>
         </div>
         <div className={"d-flex justify-content-between shop-checkout-prices"}>
-          Shipping amount
+          Phí Vận Chuyển
+          {/* Shipping amount */}
           <span>
             <span style={{ textTransform: "lowercase" }}>{currencyName}</span>
             {props.shippingPrice.toLocaleString()}
@@ -36,7 +38,10 @@ const checkoutCartTotals = (props) => {
       </li>
 
       <li className="list-group-item d-flex justify-content-between shop-checkout-total">
-        <span>Total</span>
+        <span>
+          Tổng Cộng
+          {/* Total */}
+          </span>
         <span className={"shop-total"}>
           <span style={{ textTransform: "capitalize" }}>{currencyName}</span>
           {props.shoppingTotal.toLocaleString()}

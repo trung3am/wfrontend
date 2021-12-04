@@ -26,7 +26,8 @@ const HomeSale = (props) => {
           to={`/product/${product.slug}`}
           exact
         >
-          View Item
+          Xem Chi Tiết  
+          {/* View Item */}
         </NavLink>
       </div>
     );
@@ -34,13 +35,15 @@ const HomeSale = (props) => {
   return (
     <div className="container products-section mb-4">
       <div className="products-section-title pb-3">
-        <h4>ON SALE</h4>
+        <h4>Các Sản Phẩm Đang Khuyến Mãi</h4>
+        {/* ON SALE */}
         <NavLink
           className="btn btn-link products-section-link"
           to="/sale"
           exact
         >
-          See All
+          Xem Tất Cả
+          {/* See All */}
         </NavLink>
       </div>
       <div className="products-container">{products}</div>

@@ -82,7 +82,12 @@ const Cart = (props) => {
   } else {
     cartContent = (
       <h5 className={"shop-empty-cart"}>
-        Your cart is empty. <Link to={"/all"}>Please fill it up.</Link>
+        Giỏ hàng đang trống
+        {/* Your cart is empty.  */}
+        <Link to={"/all"}>
+          Hãy Mua Sắm Nào!
+          {/* Please fill it up. */}
+          </Link>
       </h5>
     );
   }

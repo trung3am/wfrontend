@@ -5,58 +5,106 @@ const FooterLinks = () => {
   return (
     <div className="footer-contaner">
       <div>
-        <h5>About</h5>
+        <h5>Giới Thiệu Về Chúng Tôi
+          {/* About */}
+        </h5>
         <ul className="list-unstyled text-small">
           <li>
-            <NavLink to="/">Company</NavLink>
+            <NavLink to="/">
+              Công Ty
+              {/* Company */}
+              </NavLink>
           </li>
           <li>
-            <NavLink to="/">Location</NavLink>
+            <NavLink to="/">
+              Địa chỉ
+              {/* Location */}
+              </NavLink>
           </li>
           <li>
-            <NavLink to="/">Contacts</NavLink>
+            <NavLink to="/">
+              Liên Hệ
+              {/* Contacts */}
+              </NavLink>
           </li>
           <li>
-            <NavLink to="/">Opening Hours</NavLink>
+            <NavLink to="/">
+              Giờ Mở Cửa
+              {/* Opening Hours */}
+              </NavLink>
           </li>
         </ul>
       </div>
       <div>
-        <h5>Useful links</h5>
+        <h5>
+          Liên Kết Hỗ Trợ
+          {/* Useful links */}
+          </h5>
         <ul className="list-unstyled text-small">
           <li>
-            <NavLink to="/">Help</NavLink>
+            <NavLink to="/">
+              Trợ Giúp
+              {/* Help */}
+              </NavLink>
           </li>
           <li>
-            <NavLink to="/">Privacy Ploicy</NavLink>
+            <NavLink to="/">
+              Chính Sách Bảo Mật
+              {/* Privacy Ploicy */}
+              </NavLink>
           </li>
           <li>
-            <NavLink to="/">Terms and Conditions</NavLink>
+            <NavLink to="/">
+              Các Điều Khoản - Điều Kiện
+              {/* Terms and Conditions */}
+              </NavLink>
           </li>
           <li>
-            <NavLink to="/">FAQ</NavLink>
+            <NavLink to="/">
+              Câu hỏi thường gặp mua hàng
+              {/* FAQ */}
+              </NavLink>
           </li>
         </ul>
       </div>
       <div>
-        <h5>Customer Servie</h5>
+        <h5>
+          Dịch vụ
+          {/* Customer Servie */}
+
+        </h5>
         <ul className="list-unstyled text-small">
           <li>
-            <NavLink to="/">Payment Methods</NavLink>
+            <NavLink to="/">
+              Phương Thức Thanh Toán
+              {/* Payment Methods */}
+              </NavLink>
           </li>
           <li>
-            <NavLink to="/">Money-back</NavLink>
+            <NavLink to="/">
+              Hoàn Tiền
+              {/* Money-back */}
+              </NavLink>
           </li>
           <li>
-            <NavLink to="/">Returns</NavLink>
+            <NavLink to="/">
+              Chính Sách Đổi trả
+              {/* Returns */}
+              </NavLink>
           </li>
           <li>
-            <NavLink to="/">Shipping</NavLink>
+            <NavLink to="/">
+              Giao hàng - Vận chuyển
+              {/* Shipping */}
+              </NavLink>
           </li>
         </ul>
       </div>
       <div>
-        <h5>Join Us</h5>
+        <h5>
+          Liên Kết Với Chúng Tôi
+          {/* Join Us */}
+          </h5>
         <ul className="list-unstyled text-small">
           <li>
             <NavLink to="/">Twitter</NavLink>

@@ -27,11 +27,11 @@ class SignUp extends React.Component {
     // const emailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     const { displayName, email, password, confirmPassword } = this.state;
     if (!displayName || !email || !password) {
-      alert("please provide information");
+      alert("Vui lòng cung cấp thông tin");
       return;
     }
     if (password !== confirmPassword) {
-      alert("passwords don't match");
+      alert("Mật khẩu nhập không giống nhau");
       return;
     }
     // if (!email.match(emailFormat)) {
@@ -43,14 +43,14 @@ class SignUp extends React.Component {
     //   return;
     // }
     if (password.length < 6 || password.length > 30) {
-      alert("password must contain at least 6 character long");
+      alert("Mật khẩu phải ít nhất 6 ký tự");
       return;
     }
     try {
       const user = await SignUpApi(displayName, email, password)
 
       if (user.error) {
-        alert("cannot create user");
+        alert("Không thể tạo User");
         return;
       }
       this.props.updateCurrentUser(user);
@@ -58,7 +58,7 @@ class SignUp extends React.Component {
     } catch (e) {
       console.log(e)
     }
-    alert("failed to signup")
+    alert("Lỗi khi Đăng ký!!")
 
   };
 
@@ -72,15 +72,20 @@ class SignUp extends React.Component {
     const { displayName, email, password, confirmPassword } = this.state;
     return (
       <div className="sign-up">
-        <h2 className="title">I do not have a account</h2>
-        <span>Sign up with your email and password</span>
+        <h2 className="title"> Tôi chưa có tài khoản.
+          {/* I do not have a account */}
+        </h2>
+        <span>
+          Đăng ký thành viên bằng email và mật khẩu
+          {/* Sign up with your email and password */}
+          </span>
         <form className="sign-up-form" onSubmit={this.handleSubmit}>
           <FormInput
             type="text"
             name="displayName"
             value={displayName}
             onChange={this.handleChange}
-            label="Display Name"
+            label="Tên Đăng Nhập"
             required
           />
           <FormInput
@@ -96,7 +101,7 @@ class SignUp extends React.Component {
             name="password"
             value={password}
             onChange={this.handleChange}
-            label="Password"
+            label="Mật Khẩu"
             required
           />
           <FormInput
@@ -104,7 +109,7 @@ class SignUp extends React.Component {
             name="confirmPassword"
             value={confirmPassword}
             onChange={this.handleChange}
-            label="Confirm Password"
+            label="Xác thực lại mật khẩu"
             required
           />
           <CustomButton type="submit">SIGN UP</CustomButton>
