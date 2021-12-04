@@ -1,4 +1,6 @@
 let data = {
+  order: null,
+  users: null,
   currentUser: null,
   user_data: null,
   cart: [],

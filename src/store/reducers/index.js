@@ -15,6 +15,13 @@ const appReducer = (state = initialState, action) => {
         ...state,
         priceFilter: productPriceFilter,
       };
+
+    case actionTypes.UPDATE_ORDER:
+      return{
+        ...state,
+        order: action.order
+      }
+    
     case actionTypes.ADD_TO_CART:
       let newCart = [...state.cart];
       let newCartTotal = state.cartTotal;

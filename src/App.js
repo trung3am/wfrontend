@@ -9,6 +9,8 @@ import Spinner from "./Spinner/Spinner";
 
 import "./App.css";
 
+import AdminMain from "./views/AdminMain";
+
 
 
 
@@ -29,8 +31,11 @@ class App extends Component {
           <Switch>
             <Route path={"/"} exact component={this.props.isLoading ? Spinner : Maincontainers.HomePage} />
             <Route path={"/all"} exact component={this.props.isLoading ? Spinner : Maincontainers.AllPage} />
-            <Route path={"/admin/product"} exact component={this.props.isLoading 
-               ? Spinner : Maincontainers.ProductAdminPage} />
+            <Route path={"/admin/product"} exact component={this.props.currentUser && this.props.user_data.admin==="1" ? 
+             Maincontainers.ProductAdminPage : Spinner} />
+            <Route path={"/admin/main"} component={this.props.currentUser && this.props.user_data.admin==="1" ? AdminMain :Spinner}/>
+            <Route path={"/admin/user"} component={this.props.currentUser && this.props.user_data.admin==="1" ? AdminMain :Spinner}/>
+            <Route path={"/admin/order"} component={this.props.currentUser && this.props.user_data.admin==="1" ? AdminMain :Spinner}/>
             <Route
               path={"/category/:category"}
               component={this.props.isLoading ? Spinner : Maincontainers.ProductCategoriesPage}
@@ -39,7 +44,7 @@ class App extends Component {
               () => this.props.currentUser ? (<Redirect to = '/user'/>) : (<Maincontainers.LoginPage/>)
             }  />
             <Route exact path={"/admin/login"} render = {
-              () => this.props.currentUser ? (<Redirect to = '/'/>) : (<Maincontainers.AdminLoginPage/>)
+              () => this.props.currentUser ? (<Redirect to = '/admin/main'/>) : (<Maincontainers.AdminLoginPage/>)
             }  />
             <Route exact path={"/user"} render = {
               () => this.props.currentUser ?  (<Maincontainers.UserPage user_data={this.props.user_data}
@@ -61,8 +66,8 @@ class App extends Component {
             />
             <Route
               path={"/admin/product/:productSlug"}
-              render={(props) => ( this.props.isLoading ? <Spinner/> :
-                <Maincontainers.ProductDetailsPage
+              render={(props) => ( !this.props.currentUser || this.props.user_data.admin === "0" ? <Spinner/> :
+                <Maincontainers.ProductEditPage
                   key={props.match.params.productSlug}
                   {...props}
                 />

@@ -271,7 +271,7 @@ class ProductDetails extends Component {
                       disabled={this.disableAddToCartButton()}
                       onClick={this.handleAddToCart}
                     >
-                      {this.product.quantity ? "Add To Cart" : "Out of Stock"}
+                      {this.product.quantity ? "Thêm vào giỏ hàng" : "Hết Hàng"}
                     </button>
                   </div>
                 </div>

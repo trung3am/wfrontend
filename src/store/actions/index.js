@@ -8,6 +8,10 @@ export const loadDataToStore = (products) =>{
   return {type: actionTypes.LOAD_DATA_TO_STORE, products:products };
 }
 
+export const updateOrder = (order) =>{
+  return {type: actionTypes.UPDATE_ORDER, order: order}
+}
+
 export const signOut = () =>{
   return {type: actionTypes.SIGN_OUT }
 }
