@@ -17,9 +17,10 @@ const Index = (props) => {
 
   return (
     <div className={"container shop-left-column price-filter mt-2 py-2"}>
-      <h5>Filter by Price</h5>
+      <h5>Lọc Theo Giá</h5>
+      {/* Filter by Price */}
       <div>
-        {`Max Price : `}
+        {`Giá Cao Nhất : `}
         <span>
           {currencyName}
           {productPrice(pricerange, currencyValue)}

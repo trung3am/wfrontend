@@ -20,7 +20,7 @@ const Index = (props) => {
   }
   return (
     <SecondaryLayout
-      results={`(${productsCount} products found)`}
+      results={`( Tìm thấy ${productsCount} sản phẩm)`}
       breadCrumbs={props.breadCrumbs}
     >
       {products}

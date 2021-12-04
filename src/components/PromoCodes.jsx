@@ -7,8 +7,10 @@ const PromoCodes = (props) => {
     <div>
       {props.showText ? (
         <span>
-          <h5>Great Discounts!</h5>
-          <p>Use the following promo codes to get amazing discounts</p>
+          <h5>Siêu Giảm Giá! </h5>
+          {/* Great Discounts! */}
+          <p>Sử dụng các mã khuyến mãi siêu hot để được giả giám </p>
+          {/* Use the following promo codes to get amazing discounts */}
         </span>
       ) : null}
       <ul className="list-group list-group-flush">

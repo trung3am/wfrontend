@@ -17,7 +17,8 @@ const promoCodeForm = props => {
                         <button
                             disabled={props.promoCode.length < 5}
                             className="btn shop-btn-secondary">
-                            Redeem
+                            Hoàn trả
+                            {/* Redeem */}
                         </button>
                     </div>
                 </div>

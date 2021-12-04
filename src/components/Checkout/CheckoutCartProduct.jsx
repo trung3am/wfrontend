@@ -32,7 +32,10 @@ const checkoutCartProduct = (props) => {
                 </small>
               ) : null}
               <small>
-                <span className="text-muted">Qty: </span>
+                <span className="text-muted">
+                  Số lượng:
+                  {/* Qty: */}
+                   </span>
                 {props.checkoutCartCount}
               </small>
             </p>

@@ -1,19 +1,21 @@
 import React from 'react';
 import MenuItem from "../UI/MenuItem/MenuItem";
 import PropTypes from 'prop-types';
+import SearchBar from './SearchBar';
 
 const MenuComponent = (props) => {
     return (
         <React.Fragment>
-            <MenuItem linkTo={'/all'}>All</MenuItem>
-            <MenuItem linkTo={'/category/men'}>Men</MenuItem>
-            <MenuItem linkTo={'/category/women'}>Women</MenuItem>
-            <MenuItem linkTo={'/category/kids'}>Kids</MenuItem>
+             <SearchBar/> 
+            <MenuItem linkTo={'/all'}>Trang Chủ</MenuItem>
+            <MenuItem linkTo={'/category/men'}>Nam</MenuItem>
+            <MenuItem linkTo={'/category/women'}>Nữ</MenuItem>
+            <MenuItem linkTo={'/category/kids'}>Trẻ Em</MenuItem>
             <MenuItem linkTo={'/sale'}>Sale</MenuItem>
             <MenuItem linkTo={'/cart'}>
-                Cart <span className="badge badge-light">{props.cartCount}</span>
+                Giỏ Hàng <span className="badge badge-light">{props.cartCount}</span>
             </MenuItem>
-            <MenuItem linkTo={props.currentUser ? '/user' :"/login"}>{props.currentUser ? props.currentUser : "Login or Sign up"}</MenuItem>
+            <MenuItem linkTo={props.currentUser ? '/user' :"/login"}>{props.currentUser ? props.currentUser : "Đăng Nhập/ Đăng Ký"}</MenuItem>
         </React.Fragment>
     )
 };

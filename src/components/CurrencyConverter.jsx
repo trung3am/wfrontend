@@ -12,7 +12,10 @@ const CurrencyConverter = (props) => {
     <div className="form-group">
       {props.showLabel ? (
         <label>
-          <h5>Convert Currency</h5>
+          <h5>
+            Chuyển đổi tiền tệ
+            {/* Convert Currency */}
+            </h5>
         </label>
       ) : null}
       <select

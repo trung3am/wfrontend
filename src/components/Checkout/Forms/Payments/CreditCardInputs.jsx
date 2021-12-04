@@ -6,7 +6,10 @@ const creditCardInputs = (props) => {
         <React.Fragment>
             <div className="row">
                 <div className="col-md-6 mb-3">
-                    <label>Name on card</label>
+                    <label>
+                        Tên Thẻ
+                        {/* Name on card */}
+                        </label>
                     <input
                         type="text"
                         className="form-control"
@@ -14,11 +17,15 @@ const creditCardInputs = (props) => {
                         value={props.creditCardInfo.creditCardName.value}
                         onChange={(event) => props.inputChanged(event,'creditCardName')}/>
                     <div className="invalid-feedback">
-                        Name on card is required
+                    Không để trống Tên Thẻ
+                        {/* Name on card is required */}
                     </div>
                 </div>
                 <div className="col-md-6 mb-3">
-                    <label>Credit card number</label>
+                    <label>
+                        Số Thẻ 
+                        {/* Credit card number */}
+                        </label>
                     <input
                         type="text"
                         className="form-control"
@@ -26,7 +33,8 @@ const creditCardInputs = (props) => {
                         value={props.creditCardInfo.creditCardNumber.value}
                         onChange={(event) => props.inputChanged(event,'creditCardNumber')}/>
                     <div className="invalid-feedback">
-                        Credit card number is required
+                    Không để trống Số Thẻ
+                        {/* Credit card number is required */}
                     </div>
                 </div>
             </div>
@@ -40,7 +48,8 @@ const creditCardInputs = (props) => {
                         value={props.creditCardInfo.creditCardExpiration.value}
                         onChange={(event) => props.inputChanged(event,'creditCardExpiration')}/>
                     <div className="invalid-feedback">
-                        Expiration date required
+                         Không để trống Ngày hết hạn 
+                        {/* Expiration date required */}
                     </div>
                 </div>
                 <div className="col-md-3 mb-3">
@@ -52,7 +61,8 @@ const creditCardInputs = (props) => {
                         value={props.creditCardInfo.creditCardCvv.value}
                         onChange={(event) => props.inputChanged(event,'creditCardCvv')}/>
                     <div className="invalid-feedback">
-                        Security code required
+                    Không để trống Mã bảo mật
+                        {/* Security code required */}
                     </div>
                 </div>
             </div>

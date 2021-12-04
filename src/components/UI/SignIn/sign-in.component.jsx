@@ -23,15 +23,15 @@ class SignIn extends React.Component {
     event.preventDefault();
     const {displayName, password} = this.state
     if (!displayName ||  !password) {
-      alert("please provide information");
+      alert("Vui lòng cung cấp thông tin");
       return;
     }
     if (displayName.length < 3 || displayName.length > 30) {
-      alert("username must be at least 3 character long");
+      alert("Username phải có ít nhất 3 ký tự");
       return;
     }
     if (password.length < 6 || password.length > 30) {
-      alert("password must contain at least 6 character long");
+      alert("password phải có ít nhất 6 ký tự");
       return;
     }
     try {
@@ -40,7 +40,7 @@ class SignIn extends React.Component {
         alert("invalid username or password")
       }
       if (user.error) {
-        alert("invalid username or password")
+        alert("Sai Tên đăng nhập hoặc mật khẩu")
         return;
       }
       if(user.message){
@@ -67,8 +67,8 @@ class SignIn extends React.Component {
   render() {
     return (
       <div className="sign-in">
-        <h2>I already have an account</h2>
-        <span>Sign in with your email and password</span>
+        <h2>Tôi đã có tài khoản</h2>
+        <span>Đăng nhập với Username và mật khẩu</span>
 
         <form onSubmit={this.handleSubmit}>
           <FormInput
@@ -76,7 +76,7 @@ class SignIn extends React.Component {
             type="displayName"
             handleChange={this.handleChange}
             value={this.state.displayName}
-            label="displayName"
+            label="Tên đăng nhập"
             required
           />
           <FormInput
@@ -84,7 +84,7 @@ class SignIn extends React.Component {
             type="password"
             value={this.state.password}
             handleChange={this.handleChange}
-            label="password"
+            label="Mật khẩu"
             required
           />
           <div className="buttons">

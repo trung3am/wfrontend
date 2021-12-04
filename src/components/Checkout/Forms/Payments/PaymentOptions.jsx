@@ -13,7 +13,8 @@ const paymentOptions = props => {
                         checked={props.paymentMethod === "creditCard"}
                         onChange={props.paymentOptionChanged}
                     />
-                    Credit Card
+                    Thẻ Tín Dụng
+                    {/* Credit Card */}
                 </label>
             </li>
 
@@ -25,7 +26,8 @@ const paymentOptions = props => {
                         checked={props.paymentMethod === "onDelivery"}
                         onChange={props.paymentOptionChanged}
                     />
-                    Pay on Delivery
+                    Thanh Toán Khi Nhận Hàng
+                    {/* Pay on Delivery */}
                 </label>
             </li>
         </ul>
