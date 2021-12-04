@@ -36,15 +36,25 @@ class SignIn extends React.Component {
     }
     try {
       const user = await SignInApi(displayName, password)
+      if (!user) {
+        alert("invalid username or password")
+      }
       if (user.error) {
         alert("invalid username or password")
         return;
       }
-      await this.props.updateCurrentUser(user)
+      if(user.message){
+        alert("invalid")
+      }
+      if (user) {
+        await this.props.updateCurrentUser(user)  
+      }
+        alert("invalid username or password")
       return;
     } catch (e) {
       console.log(e)
-    }    
+    }
+    
 
   };
 

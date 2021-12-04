@@ -7,6 +7,8 @@ import Cart from "./Cart";
 import Checkout from "./Checkout";
 import SignInAndSignUpPage from "./SignInAndSignUp/sign-in-and-sign-up.component";
 import EditUser from './EditUser/EditUser'
+import AdminSignInPage from "./SignInAndSignUp/Adminsign-in-and-sign-up.component";
+import ProductAdmin from "./Admin/ProductAdmin";
 
 export const UserPage = EditUser;
 export const LoginPage = SignInAndSignUpPage;
@@ -17,3 +19,5 @@ export const ProductDetailsPage = ProductDetails;
 export const SalesPage = Sale;
 export const CartPage = Cart;
 export const CheckoutPage = Checkout;
+export const AdminLoginPage = AdminSignInPage;
+export const ProductAdminPage = ProductAdmin;

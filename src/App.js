@@ -29,12 +29,17 @@ class App extends Component {
           <Switch>
             <Route path={"/"} exact component={this.props.isLoading ? Spinner : Maincontainers.HomePage} />
             <Route path={"/all"} exact component={this.props.isLoading ? Spinner : Maincontainers.AllPage} />
+            <Route path={"/admin/product"} exact component={this.props.isLoading 
+               ? Spinner : Maincontainers.ProductAdminPage} />
             <Route
               path={"/category/:category"}
               component={this.props.isLoading ? Spinner : Maincontainers.ProductCategoriesPage}
             />
             <Route exact path={"/login"} render = {
               () => this.props.currentUser ? (<Redirect to = '/user'/>) : (<Maincontainers.LoginPage/>)
+            }  />
+            <Route exact path={"/admin/login"} render = {
+              () => this.props.currentUser ? (<Redirect to = '/'/>) : (<Maincontainers.AdminLoginPage/>)
             }  />
             <Route exact path={"/user"} render = {
               () => this.props.currentUser ?  (<Maincontainers.UserPage user_data={this.props.user_data}
@@ -47,6 +52,15 @@ class App extends Component {
             <Route path={"/checkout"} component={this.props.isLoading ? Spinner : Maincontainers.CheckoutPage} />
             <Route
               path={"/product/:productSlug"}
+              render={(props) => ( this.props.isLoading ? <Spinner/> :
+                <Maincontainers.ProductDetailsPage
+                  key={props.match.params.productSlug}
+                  {...props}
+                />
+              )}
+            />
+            <Route
+              path={"/admin/product/:productSlug"}
               render={(props) => ( this.props.isLoading ? <Spinner/> :
                 <Maincontainers.ProductDetailsPage
                   key={props.match.params.productSlug}

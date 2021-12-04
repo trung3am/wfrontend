@@ -48,7 +48,9 @@ class SignUp extends React.Component {
     }
     try {
       const user = await SignUpApi(displayName, email, password)
-
+      if(!user){
+        alert("cannot create user");
+      }
       if (user.error) {
         alert("cannot create user");
         return;
