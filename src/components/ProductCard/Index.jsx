@@ -76,7 +76,7 @@ const Index = (props) => {
               to={`/product/${item.slug}`}
               exact
             >
-              View Item
+              Xem Chi Tiết
             </NavLink>
           </div>
         </div>

@@ -22,7 +22,8 @@ const Deal = () => {
             <h1 className="deals-title mb-4">{deal.title}</h1>
             <p className="text mb-4">{deal.text}</p>
             <NavLink className="btn btn-primary btn" to={deal.link} exact>
-              Shop Now
+              Mua Sắm Ngay! 
+              {/* Shop Now */}
             </NavLink>
           </div>
         </div>

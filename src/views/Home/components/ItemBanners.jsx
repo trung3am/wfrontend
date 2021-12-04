@@ -28,7 +28,8 @@ const ItemBanners = () => {
               {item.text} <br /> Up to {item.percentage}%
             </h4>
             <NavLink className="btn btn-primary btn-sm" to={item.link} exact>
-              Shop Now
+              Mua Ngay
+              {/* Shop Now */}
             </NavLink>
           </div>
           <img

@@ -9,7 +9,10 @@ const promoCodeFormValue = (props) => {
   return (
     <React.Fragment>
       <li className="list-group-item">
-        <h6>Applied Promo code</h6>
+        <h6>
+          Sử dụng mã khuyến mãi
+          {/* Applied Promo code */}
+          </h6>
         <div className="d-flex justify-content-between">
           <div className="text-success">
             <small className={"font-weight-bold"}>

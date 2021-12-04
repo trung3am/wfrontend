@@ -21,7 +21,8 @@ const Modal = (props) => {
                 className="btn shop-btn-primary"
                 onClick={props.closeModalClick}
               >
-                Continue Shopping
+                Tiếp Tục Mua Sắm
+                {/* Continue Shopping */}
               </button>
             </div>
           </div>

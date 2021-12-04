@@ -9,7 +9,7 @@ const MainMenu = (props) => {
         <nav className="navbar navbar-expand-md navbar-light bg-light" style={{ boxShadow: '0 2px 2px -2px gray' }}>
             <div className="container">
                 <span className="navbar-brand">
-                    <NavLink to={'/'} exact>DUKA</NavLink>
+                    <NavLink to={'/'} exact>Thời trang Tulody </NavLink>
                 </span>
                 <button
                     className="navbar-toggler"
